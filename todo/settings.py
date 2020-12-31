@@ -25,7 +25,7 @@ SECRET_KEY = 'ykh95d&8_%+u-!t@$+k!6%^s2h@)55nd05yfk@sn5a^4rsm%7h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['floran.herokuapp.com','127.0.0.1']
 
 
 # Application definition

@@ -34,3 +34,8 @@ a.article-title:hover {
 .article-content {
     white-space: pre-line;
 }
+@media(max-width: 770px){
+    .main{
+        padding: 100px 10px;
+    }
+}

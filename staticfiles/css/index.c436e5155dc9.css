@@ -1,0 +1,36 @@
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0px;
+}
+
+.main{
+    position: relative;
+    /* margin-top: 100px; */
+    padding: 100px;
+}
+
+.add,
+.content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+    
+.article-title {
+    color: #444444;
+}
+
+a.article-title:hover {
+    color: #428bca;
+    text-decoration: none;
+}
+.article-content {
+    white-space: pre-line;
+}

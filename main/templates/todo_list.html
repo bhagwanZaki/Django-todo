@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+
+{% block content %}
+        <a href="{% url 'create-todo' %}">
+        <div class="add">
+            <h4>New Todo </h4>
+        </div>
+        </a>    
+        <br>
+        {% for object in object_list %}
+        <div class="row content-section"">
+            <div class="col-lg-8">
+                <h2><a class="article-title" href="{% url 'detail-todo' object.id %}"> {{object.title}}</a></h2>
+            </div>
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-12">
+                        {% if object.completed %}
+                            <a class="btn btn-success" href="{% url 'completed' object.id %}">Completed</a>
+                        {% else %}
+                            <a class="btn btn-warning" href="{% url 'completed' object.id %}">Not Completed</a>
+                        {% endif %}    
+                    </div>
+                    <br><br>
+                    <div class="col-12">
+                        <a class="btn btn-primary" href="{% url 'update-todo' object.id%}">Update</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-12">
+                {{ object.date }}
+            </div>
+            
+            
+        </div>
+        {% endfor %}
+    
+{% endblock content %}

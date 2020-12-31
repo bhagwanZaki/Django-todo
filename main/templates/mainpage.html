@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" href="pic/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="{% static 'css/mainpage.css' %}" rel="stylesheet">
+    <script rel="Javascript" src="{% static 'js/typewriter.js' %}"></script>
+
+    <title>Floran Todo</title>
+</head>
+<body>
+    <section id="home">
+        <div class="logo">Floran Todo App</div>
+        {% comment %} <img src="pic/degin3.jpg" class="bg"> {% endcomment %}
+        <div class="content" id="home" data-aos="fade-up">
+            <h2>
+                <span class="txt-type" data-wait="2900" data-words='["Organize your work","Free up your mental space","Achieve peace of mind with Floran Todo"]'></span></h2>  
+            <p>
+               
+            </p>
+            {% if user.is_authenticated %}
+            <a class="button" href="{% url 'todo-list' %}">Home</a>
+            {% else %}
+            <a class="button" href="{% url 'login' %}">Login</a>
+            <a class="button" href="{% url 'register' %}">Register</a>
+            {% endif %}
+            {% comment %} <input type="button" value="Login" onclick="startfun();" > {% endcomment %}
+            {% comment %} <input type="button" value="Register" onclick="startfun();" > {% endcomment %}
+        </div>
+        
+    </section>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            startEvent: 'DOMContentLoaded',
+            offset:200,
+            duration:1000,
+            once:false,
+        });
+    </script>
+</body>
+</html>

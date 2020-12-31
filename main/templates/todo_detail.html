@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+        <a class="btn btn-secondary" href="{% url 'todo-list' %}"> < Back</a>
+        </div>
+        <br><br>
+        <div class="row content-section">
+            <div class="col-lg-8">
+                <h2>{{object.title}}</h2>
+            </div>
+            <div class="col-lg-4">
+                {{ object.complete}}
+            </div>
+            <div class="col-12">
+                <p class="article-content">
+                    {{ object.description }}
+                </p>
+            </div>
+            <div class="col-12">
+                {{ object.date }}
+            </div>
+        </div>
+        
+    </div>
+{% endblock content %}

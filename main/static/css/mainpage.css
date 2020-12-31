@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+}
+
+body{
+    background-color: #333d79ff;
+    height: 100%;
+    font-family: 'Poppins', sans-serif !important;
+}
+section{
+    padding: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+section .logo{
+    position: absolute;
+    top: 30px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2em;
+    z-index: 100;
+    cursor: pointer;
+}
+
+section .bg{
+    position: absolute;
+    top: 0;
+    right: 60px;
+    height: 100%;
+}
+
+section .content{
+    position: relative;
+    max-width: 650px;
+    z-index: 1;
+}
+section .content h2{
+    color: #fff;
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1.1em;
+}
+
+section .content p{
+    color: #fff;
+    font-size: 1.1em;
+    margin: 20px 0 10px;
+}
+
+section .content .button{
+    color: #fff;
+    background-color: #f60f20;
+    font-size: 1em;
+    margin: 20px 0;
+    padding: 10px 30px;
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transform: 0.5 ease-in-out;
+    transition: 0.5s;
+}
+section .content .button:hover{
+    color: #fff;
+    text-decoration: none;
+    background-color: #2e1b64;
+    border: 2px solid #fff;
+}
+.txt-type > .txt {
+    border-right: 0.2rem solid #777;
+  }
+.copyrighttext{
+    position: absolute;
+    bottom: 20px;
+    color: #fff;
+    font-size: 1.1em;
+    margin: 20px 0 10px;
+}
+@media(max-width: 770px){
+    section{
+        padding: 100px 40px;
+    }
+    section .content h2{
+        font-size: 2.5em;
+    }
+
+    section .bg{
+        position: absolute;
+        top: 0 ;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.5;
+    }
+
+    section .logo{
+        top: 10px;
+        font-size: 1.5em;
+    }
+}

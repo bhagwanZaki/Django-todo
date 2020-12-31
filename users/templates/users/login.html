@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<style>
+    {% comment %} .row{
+        padding-top: 100px!important;
+        
+
+    } {% endcomment %}
+</style>
+<div class="container">
+    <div class="row">
+        <div class="centered col-sm-12 col-md-12 col-md-offset-6 ">
+            <div class="content-section">
+                <form method="POST">
+                    {% csrf_token %}
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4"> Login </legend>
+                        {{ form|crispy }}
+                    </fieldset>
+                    <div class="form-group">
+                        <button class="btn btn-outline-info" type="submit">login</button>
+                        <small class="text-muted ml-2">
+                            <a href="{% url 'password_reset' %}">Forget password</a>
+                        </small>
+                    </div>
+                </form>
+                <div class="border-top pt-3">
+                    <small class="text-muted">
+                        
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+{% endblock content %}

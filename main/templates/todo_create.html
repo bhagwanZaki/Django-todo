@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+
+{% block content %}
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+  
+    {% include 'form_snippet.html' %}
+  
+    {% if object %}
+      <input type="submit" class="btn btn-primary" value="Update Todo">
+    {% else %}
+      <input type="submit" class="btn btn-primary" value="Add Todo">
+    {% endif %}
+  </form>
+{% endblock content %}

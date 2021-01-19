@@ -1,7 +1,7 @@
 # Django-todo
 
 Floran Todo is a simple web application to save Your daily tasks in order not to miss anything.
-The main goal behind this project was to pratice the Django and different generic views of django
+The main goal behind this project was to pratice the Django and different generic views of django.
 
 
 # Features
